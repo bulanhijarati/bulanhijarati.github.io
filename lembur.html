@@ -5,155 +5,393 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
-    <title>Bulan's site</title>
-    <style>
-      #kembali {
-        margin-top: -35px;
-        margin-bottom: 30px;
-      }
-    </style>
+    <title>Bulan Hijarati</title>
   </head>
-  <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top" style="background-color: #284045">
-      <div class="container">
-        <a class="navbar-brand" href="#" style="color: #e6c3d6">Bulan Hijarati</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+
+  <body id="projek">
+    <!-- Navbar Tailwind -->
+    <nav class="fixed top-0 left-0 w-full shadow-lg bg-[#284045] z-50 px-12 pt-1 pb-1">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#" class="text-[#e6c3d6] text-xl">Bulan Hijarati</a>
+        <button id="menu-toggle" class="text-[#e6c3d6] md:hidden focus:outline-none">
+          <!-- Hamburger icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home" style="color: #e6c3d6">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about" style="color: #e6c3d6">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects" style="color: #e6c3d6">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact" style="color: #e6c3d6">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul id="menu" class="hidden md:flex md:space-x-6 mt-4 md:mt-0 md:items-center">
+          <li><a href="index.html#home" class="text-[#e6c3d6] hover:underline">Home</a></li>
+          <li><a href="#tugasfont" class="text-[#e6c3d6] hover:underline">Font</a></li>
+          <li><a href="#tugasgambar" class="text-[#e6c3d6] hover:underline">Gambar</a></li>
+          <li><a href="#tugasaudio" class="text-[#e6c3d6] hover:underline">Audio</a></li>
+          <li><a href="#tugasanimasi" class="text-[#e6c3d6] hover:underline">Animasi</a></li>
+          <li><a href="#tugasvidio" class="text-[#e6c3d6] hover:underline">Vidio</a></li>
+        </ul>
       </div>
     </nav>
-    <!--Batas Navbar  -->
 
-    <!-- hoby -->
-    <section id="hoby">
+    <script>
+      // Toggle menu (hamburger untuk mobile)
+      document.getElementById('menu-toggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
+
+    <section id="tugasfont" style="background-color: #d37676">
+      <!-- font -->
       <div class="container">
-        <div class="row text-center mb-4">
-          <div class="col">
-            <h2 class="fw-bold" style="color: #fce7c8">My Projects</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-5">
-            <a href="projek/sismul.pdf" target="_blank">
-              <img src="projek/laporan.png" alt="Laporan Sismul" style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)" class="rounded-shadow-bordered" />
-            </a>
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">LAPORAN</p>
+        <h1 class="text-center font-bold text-3xl pb-2" style="color: #fff6da">FONT</h1>
+        <div class="max-w-screen-md mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-2">
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: 'Times New Roman'">
+              <p class="p-2 text-center text-xl">Times New Roman</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: arial">
+              <p class="p-2 text-center text-xl">Arial</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: Helvetica">
+              <p class="p-2 text-center text-xl">Helvetica</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: calibri">
+              <p class="p-2 text-center text-xl">Calibri</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: sans-serif">
+              <p class="p-2 text-center text-xl">Roboto</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: sans-serif">
+              <p class="p-2 text-center text-xl">Open Sans</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: Montserrat">
+              <p class="p-2 text-center text-xl">Montserrat</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: Georgia">
+              <p class="p-2 text-center text-xl">Georgia</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: Lato">
+              <p class="p-2 text-center text-xl">Lato</p>
+            </div>
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[2/1] rounded-md flex items-center justify-center" style="background-color: #fff6da; font-family: Futura">
+              <p class="p-2 text-center text-xl">Futura</p>
             </div>
           </div>
-          <div class="col-md-4 mb-5">
-            <a href="font.html">
-              <input type="image" src="projek/font.jpg" class="rounded-shadow-bordered" style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)" alt="Projects cookies" ; />
-            </a>
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">FONT</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <input type="image" src="projek/animasi.jpg" class="rounded-shadow-bordered" style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)" alt="Projects cookies" ; />
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">ANIMASI</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 mb-5">
-            <input
-              type="image"
-              src="projek/gambar.jpg"
-              class="rounded-shadow-bordered"
-              style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)"
-              alt="Projects cookies"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Ini proyek Cookies"
-            />
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">GAMBAR</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <input type="image" src="projek/audio.jpg" class="rounded-shadow-bordered" style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)" alt="Projects cookies" ; />
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">AUDIO</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <input type="image" src="projek/vidio.jpg" class="rounded-shadow-bordered" style="border-radius: 20px; width: 350px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)" alt="Projects cookies" ; />
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; color: #945034">VIDIO</p>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center mt-2">
-          <a href="index.html" id="kembali" class="btn btn-lg" style="background-color: #fada7a; color: grey">Kembali</a>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#FFF6DA"
+          fill-opacity="1"
+          d="M0,96L48,122.7C96,149,192,203,288,202.7C384,203,480,149,576,154.7C672,160,768,224,864,218.7C960,213,1056,139,1152,106.7C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
-    <!-- batas hoby -->
+    <!-- batas font -->
+
+    <section id="tugasgambar" style="background-color: #fff6da">
+      <!-- gambar -->
+      <div class="container">
+        <h1 class="text-center font-bold text-3xl pb-2" style="color: #a55b4b">GAMBAR</h1>
+        <div class="max-w-screen-md mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-1">
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/jpg.jpg" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">JPG</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/PNG.png" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">PNG</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/ico.ico" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">ICO</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/bmp.bmp" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">BMP</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/SVG.svg" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">SVG</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/WebP .webp" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">WebP</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/avif.avif" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">AVIF</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/HEIF.heif" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">HEIF</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/raw.raw" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">RAW</p>
+            </div>
+
+            <div class="w-full max-w-xs mx-auto p-2 aspect-[3/3] rounded-md flex flex-col items-center justify-center" style="background-color: #c1d8c3">
+              <img src="projek/gambar/HEIC.heic" alt="Logo" class="w-2/2 h-auto object-contain mb-2" />
+              <p class="text-center text-xl" style="font-family: Calibri">HEIC</p>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#c1d8c3"
+            fill-opacity="1"
+            d="M0,256L48,245.3C96,235,192,213,288,170.7C384,128,480,64,576,74.7C672,85,768,171,864,208C960,245,1056,235,1152,202.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-- batas gambar -->
+
+    <section id="tugasaudio" style="background-color: #c1d8c3">
+      <!-- audio -->
+      <div class="container">
+        <h1 class="text-center font-bold text-3xl pb-2" style="color: #034c53">AUDIO</h1>
+        <div class="max-w-screen-lg mx-auto px-20">
+          <div class="grid grid-cols-1 gap-4">
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/mp3.mp3" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">MP3</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/WAV.wav" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">WAV</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/flac.flac" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">FLAC</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/aac.aac" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">AAC</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/ogg.ogg" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">OGG</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/wma.wma" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">WMA</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/m4a.m4a" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">M4A</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/AIFF.aiff" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">AIFF</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/MID.mid" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">MID</p>
+            </div>
+
+            <div class="w-full min-w-[300px] p-4 rounded-3xl flex flex-col items-center justify-center" style="background-color: #ffe3e3">
+              <audio controls class="w-full">
+                <source src="projek/audio/opus.opus" />
+              </audio>
+              <p class="text-center text-xl" style="font-family: Calibri">Opus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#FADA7A"
+          fill-opacity="1"
+          d="M0,256L48,266.7C96,277,192,299,288,288C384,277,480,235,576,202.7C672,171,768,149,864,165.3C960,181,1056,235,1152,240C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- batas audio -->
+
+    <section id="tugasanimasi" style="background-color: #fada7a">
+      <!-- Animasi -->
+      <div class="container">
+        <h1 class="text-center font-bold text-3xl pb-2" style="color: #6c4e31">ANIMASI</h1>
+        <div class="max-w-screen-md mx-auto">
+          <div class="max-w-screen-xl mx-auto p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/2D.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">2D Animation</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/3D.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">3D Animation</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/CGI.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">CGI</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/clay.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Claymation</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/flat.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Flat Design</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/Stop Motion.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Stop Motion</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/Cutout Animation.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Cutout Animation</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/motion graphics.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Motion Graphics</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/Hybrid Animation.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Hybrid Animation</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #6c4e31">
+                <video src="projek/animasi/Typography Animation.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #d8a25e">Typography Animation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#8D77AB"
+          fill-opacity="1"
+          d="M0,192L40,202.7C80,213,160,235,240,224C320,213,400,171,480,160C560,149,640,171,720,149.3C800,128,880,64,960,80C1040,96,1120,192,1200,208C1280,224,1360,160,1400,128L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Batas animasi -->
+
+    <section id="tugasvidio" style="background-color: #8d77ab">
+      <!-- vidio -->
+      <div class="container">
+        <h1 class="text-center font-bold text-3xl pb-2" style="color: #acd3a8">VIDIO</h1>
+        <div class="max-w-screen-md mx-auto">
+          <div class="max-w-screen-xl mx-auto p-4">
+            <div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/MP4.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">MP4</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/3D.mp4" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">MKV</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/FLV.flv" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">FLV</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/MOV.mov" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">MOV</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/WMV.wmv" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">WMV</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/AVI.avi" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">AVI</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/WEBM.webm" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">WEBM</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/OGV.ogv" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">OGV</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/3GP.3gp" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">3GP</p>
+              </div>
+
+              <div class="w-full p-2 aspect-[4/3] rounded-2xl flex flex-col items-center justify-center" style="background-color: #acd3a8">
+                <video src="projek/video/mp" controls class="w-full h-auto rounded-md"></video>
+                <p class="text-center text-xl mt-2" style="font-family: Calibri; color: #624e88">MPEG</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#284045"
+          fill-opacity="1"
+          d="M0,192L40,197.3C80,203,160,213,240,229.3C320,245,400,267,480,245.3C560,224,640,160,720,138.7C800,117,880,139,960,160C1040,181,1120,203,1200,197.3C1280,192,1360,160,1400,144L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- batas vidio -->
 
     <!-- footer -->
     <footer class="text-white text-center p-4" style="background-color: #284045">
       <p style="color: #e6c3d6">Created by <a href="https://www.instagram.com/bulanhijarati/" style="color: #e6c3d6" class="text-white fw-bold fst-italic">Bulan Hijarati</a></p>
     </footer>
     <!-- batas footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwEuII5UOSEKPyhJ6IGsuEpjuF02YiDUVppITsxfOdbW79hhsWnxgoLxCHYpBRdZksfnA/exec';
-      const form = document.forms['contact-form'];
-      const btnSend = document.querySelector('.btn-send');
-      const btnSending = document.querySelector('.btn-sending');
-      const myAlert = document.querySelector('.my-alert');
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        //ketika tombol submit diklik
-        btnSending.classList.toggle('d-none');
-        btnSend.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => {
-            //tampilkan tombol send, hilangkan tombol sending
-            btnSending.classList.toggle('d-none');
-            btnSend.classList.toggle('d-none');
-            //tambahkan allert
-            myAlert.classList.toggle('d-none');
-            //reset form
-            form.reset();
-            console.log('Success!', response);
-          })
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
-
-    <script>
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-      const tooltipList = [...tooltipTriggerList].map((el) => new bootstrap.Tooltip(el));
-    </script>
   </body>
 </html>
