@@ -35,11 +35,23 @@
       </div>
     </nav>
 
+    <!-- Script untuk Hamburger Menu -->
     <script>
-      // Toggle menu (hamburger untuk mobile)
-      document.getElementById('menu-toggle').addEventListener('click', function () {
-        const menu = document.getElementById('menu');
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+
+      // Toggle menu ketika tombol hamburger diklik
+      menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+      });
+
+      // Tambahkan event listener pada setiap item menu untuk menutup menu setelah diklik
+      document.querySelectorAll('#menu a').forEach((item) => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            menu.classList.add('hidden'); // Menutup menu di perangkat mobile setelah klik
+          }
+        });
       });
     </script>
 

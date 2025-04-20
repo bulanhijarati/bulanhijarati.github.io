@@ -17,4 +17,6 @@ section {
 #hoby {
   background-color: #b1c29e;
 }
-
+html {
+  scroll-behavior: smooth;
+}
